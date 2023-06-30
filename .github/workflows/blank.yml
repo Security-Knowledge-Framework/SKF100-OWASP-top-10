@@ -1,0 +1,30 @@
+name: Call Markdown Lint Check Workflow
+
+on:
+  pull_request:
+    types:
+    - opened
+    - synchronize
+    - reopened
+
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+jobs:
+  call-lint-check:
+    uses: Security-Knowledge-Framework/GH-actions-markdown-linting/.github/workflows/md-lint-check.yml@main
+    with:
+      ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      repository: ${{ github.repository }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+      
+  call-spelling-check:
+    uses: Security-Knowledge-Framework/GH-actions-markdown-linting/.github/workflows/md-textlint-check.yml@main
+    with:
+      ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      repository: ${{ github.repository }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
