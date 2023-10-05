@@ -1,12 +1,12 @@
-# Web Application Security and OWASP Top 10: Course Index
+# Web Application Security and OWASP® Top 10: Course Index
 
 ## 1.0 Introduction to Web Application Security
 
 - Overview of the key principles and practices of web application security.
 
-## 1.1 Overview of the OWASP Top 10 Project
+## 1.1 Overview of the OWASP® Top 10 Project
 
-- Understanding the origins and significance of the OWASP Top 10.
+- Understanding the origins and significance of the OWASP® Top 10.
 
 ## 2.0 A0: Broken Access Control
 
